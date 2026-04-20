@@ -131,7 +131,7 @@ def download_file(filename):
 )
     return redirect(url)
 
-@app.route('/delete/<filename>', methods=['DELETE'])
+@app.route('/delete/<filename>', methods=['GET'])
 def delete_file(filename):
     
     s3.copy_object(
